@@ -1,0 +1,19 @@
+
+const myLibrary = [];
+       
+        class Book {
+             title;
+             author;
+             year;
+
+            Book( title,  author,  year){
+            this.title=title;
+            this.author=author;
+            this.year=year;
+            }
+
+            getTitle(){
+                return title;
+            }
+        
+        }

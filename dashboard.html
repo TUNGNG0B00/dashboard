@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+      <title>Dashboard</title>
+   </head>
+
+
+   <body>
+
+      <button id="sidebarToggle">
+         <img src="sidebarIcon.png" alt="sidebarIcon" height="30" width="30">
+      </button>
+
+      <div class="sidebar">
+        
+         <img src="logo.png" alt="logo" height="80" width="190" class="logo">
+         
+         <!-- sidebar -->
+         <nav class="sidebar-nav">
+            
+            <ul>
+               <li>
+                  <img src="dashboardIcon.png" alt="dashboardIcon" height="23" width="23">
+                  <i class="dashboardIcon"></i>
+                  <p>Dashboard</p>
+               </li>
+
+               <li>
+                  <img src="infoIcon.png" alt="infoIcon" height="23" width="23">
+                  <i class="infoIcon"></i>
+                  <p>About</p>
+               </li>
+               <h4>ACCOUNT PAGES</h4>
+               <li>
+                  <img src="profileLogo.png" alt="profileIcon" height="23" width="23">
+                  <i class="profileLogo"></i>
+                  <p>Profile</p>
+               </li>
+               <li>
+                  <img src="settingLogo.png" alt="settingLogo" height="23" width="23">
+                  <i class="settingLogo"></i>
+                  <p>Setting</p>
+               </li>
+               <li>
+                  <img src="signupLogo.png" alt="signupLogo" height="23" width="23">
+                  <i class="fa-solid fa-users"></i>
+                  <p>Sign In</p>
+               </li>
+               <li>
+                  <img src="signinLogo.png" alt="signinLogo" height="23" width="23">
+                  <i class="fa-solid fa-user-tie"></i>
+                  <p>Sign Up</p>
+               </li>
+            </ul>
+         </nav>
+
+         <div class="fill-bottom"></div>
+      </div>
+
+      <script>
+
+   //sidebard toggle: this function triggers the bar opening and closing
+   document.addEventListener("DOMContentLoaded", function() {
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.sidebar');
+
+  // Event listener for sidebar toggle button
+  sidebarToggle.addEventListener('click', function() {
+    toggleSidebar();
+  });
+
+  // Function to toggle sidebar visibility
+  function toggleSidebar() {
+    if (sidebar.style.left === '-250px') {
+      sidebar.style.left = '0px';
+    } else {
+      sidebar.style.left = '-250px';
+    }
+  }
+
+  // Function to adjust sidebar position on window resize
+  function resize() {
+    if (window.innerWidth <= 1300) {
+      sidebar.style.left = '-250px';
+    } else {
+      sidebar.style.left = '0px';
+    }
+  }
+
+  // Event listener for window resize
+  window.onresize = resize;
+
+  // Initial call to resize function
+  resize();
+});
+
+       </script>
+      <main>
+
+                  <!-- search bar -->
+         <div class="search-bar">
+            <button class="searchButton"> 
+               <img class="searchIcon" src="searchIcon.png" alt="searchIcon" height="35" width="35">
+             </button>
+            <input type="text" placeholder="Search...">
+        </div>
+        <button class="signInButton"> 
+         <img class="signInIcon" src="signInIcon.png" alt="signInIcon" height="20" width="20">
+         <p>Sign In</p>
+       </button>
+
+      
+         <header class="header">
+            <h3>Homepage</h3>
+         </header>
+
+      
+         <!--trend container -->
+
+         <div class="trends-container">
+                
+            <div class="trends">
+               <h2 class="video-text" >Welcome Back</h2>
+               <p class="video-text2" > Tung Ngo</p>
+               <video autoplay loop muted playsinline>
+                  <source src="video.mp4" alt="video" type="video/mp4">
+                </video>
+            </div>
+
+            <div>
+            <div class="sales-cards">
+               <img class="moneyIcon" src="moneyIcon.png" alt="moneyIcon" height="40" width="40">
+               <div class="sale-card">
+                  <p class="saleTitle" >Sales</p>
+                  <p>$ 51,000</p>
+               </div>
+            </div>
+
+            <div class="client-cards">
+               <img class="clientIcon" src="clientIcon.png" alt="clientIcon" height="30" width="30">
+               <div class="sale-card">
+                  <p class="saleTitle" >Clients</p>
+                  <p>+ 3,450</p>
+               </div>
+            </div>
+            </div>
+
+            <!-- announcent section-->
+
+            <div class="announcementBar"> 
+               <div>
+                  <p class="announcementTitle">Announcement</p>
+                     <div class="announcement1">
+                        <h3> You just hit $50,000 sales milestones!🎉🎉</h3>
+                        <p>  Congratulations on reaching the 50,000 sales milestone! 
+                             It's a significant accomplishment and a testament to your 
+                             hard work and dedication.</p>
+                     </div>
+                        <hr>
+                     <div class="announcement1">
+                        <h3> Guess who my crush is?❤️❤️</h3>
+                        <p>  Fun fact! Name starts with an A</p>
+                     </div>
+               </div>
+            </div>
+
+      
+            </div>
+
+
+         </div>
+
+<!--graph(png and not real) -->
+
+         <div class="graph-container">
+            <div class="graph">
+               <img src="graph.png" alt="graph" width="1100px" height="500px"/>
+            </div>
+           </div>
+         </div>
+
+        
+      </main>
+   </body>
+
+</html>
